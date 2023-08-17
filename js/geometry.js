@@ -12,10 +12,6 @@
         
         triangleHeight.value = '';
 
-        if(triangleBaseInputValue != 'Number'){
-            alert('Please input number')
-            return;
-        }
 
         const total = 0.5 * triangleBaseInputValue * triangleHeightInputValue;
 
