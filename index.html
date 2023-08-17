@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+
+    </header>
+    <!-- main container -->
+    <main class="mt-12">
+        <div class="flex flex-col lg:flex-row">
+            <!-- shape container -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- first card -->
+                <div class="card w-[350px] bg-[#FBBCED] shadow-xl pt-4" >
+                    <figure><img class="w-[200px]" src="/images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Triangle</h2>
+                      <p>Area (A) = 0.5 x b x h</p>
+                      <p class="mb-10">
+                        <input id="triangle-base" class="border rounded-md bg-gray-200 w-20 px-2" type="text " placeholder="Base">
+                        <span class="ml-3">cm</span>
+                        <input id="triangle-height" class="border rounded-md bg-gray-200 w-20 px-2" type="text " placeholder="Height">
+                        <span class="ml-3">cm</span>
+                      </p>
+                      <p>Area : <span id="triangle-sum" class="font-bold">0</span> cm<sup>2</sup> </p>
+                      <div class="card-actions justify-center">
+                        <button id="btn-triangle" onclick="clickHandler('btn-triangle')" class="btn btn-wide">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- second card -->
+                <div class="card w-[350px] bg-orange-300 shadow-xl pt-4">
+                    <figure><img class="w-[200px]" src="/images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Rectangle</h2>
+                      <p>Area (A) = w x i</p>
+                      <p>
+                        <input id="rectangle-width" class="border rounded-md bg-gray-200 w-20 px-2" type="text " placeholder="W">
+                        <span class="ml-3">cm</span>
+                        <input id="rectangle-length" class="border rounded-md bg-gray-200 w-20 px-2" type="text " placeholder="I">
+                        <span class="ml-3">cm</span>
+                      </p>
+                      <p>Area : <span id="rectangle-sum" class="font-bold">0</span> cm<sup>2</sup> </p>
+                      <div class="card-actions justify-center">
+                        <button id="btn-rectangle" onclick="clickHandler2('btn-rectangle')" class="btn btn-wide">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- third card -->
+                <div class="card w-[350px] bg-red-300 shadow-xl pt-4">
+                    <figure><img class="w-[200px]" src="/images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Parallelogram</h2>
+                      <p>Area (A) = b x h</p>
+                      <p>
+                        <input class="border rounded-md bg-gray-200 w-20 px-2" type="text " placeholder="Base">
+                        <span class="ml-3">cm</span>
+                        <input class="border rounded-md bg-gray-200 w-20 px-2" type="text " placeholder="Height">
+                        <span class="ml-3">cm</span>
+                      </p>
+                      <p>Area : <span class="font-bold">0</span> cm<sup>2</sup> </p>
+                      <div class="card-actions justify-center">
+                        <button class="btn btn-wide">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div>
+                <h2>Area Calculation</h2>
+            </div>
+        </div>
+
+
+        <script src="./js/geometry.js"></script>
+    </main>
+</body>
+
+</html>
