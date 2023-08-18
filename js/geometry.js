@@ -7,8 +7,8 @@
 
 
         const triangleHeight = document.getElementById('triangle-height');
-        const triangleInputHeightstring = triangleHeight.value;
-        const triangleHeightInputValue = parseFloat(triangleInputHeightstring);
+        const triangleInputHeightString = triangleHeight.value;
+        const triangleHeightInputValue = parseFloat(triangleInputHeightString);
         
         triangleHeight.value = '';
 
@@ -43,3 +43,56 @@
         rectangleWidth.value = '';
         rectangleLength.value = '';
     }
+
+
+    // Parallelogram calculation/funtional
+
+    function clickHandler3(){
+        const width = getInputValue('parallelogram-base')
+        const height = getInputValue('parallelogram-height')
+        
+        const area = width * height;
+
+        getOutputValue('parallelogram-sum', area)
+    }
+
+    function clickHandler4(){
+        const diagonal1 = getInputValue('rhombus-diagonal1')
+        const diagonal2 = getInputValue('rhombus-diagonal2')
+
+        const area = (0.5 * diagonal1 * diagonal2).toFixed(2)
+        
+        getOutputValue('rhombus-sum', area)
+    }
+
+    function clickHandler5(){
+        const perimeter = getInputValue('pentagon-perimeter')
+        const apothem = getInputValue('pentagon-apothem');
+
+        const area = (0.5 * perimeter * apothem).toFixed(2)
+
+        getOutputValue('pentagon-sum', area)
+    }
+
+    function clickHandler6(){
+        const major = getInputValue('ellipse-major');
+        const minor = getInputValue('ellipse-minor');
+        const pi = Math.PI
+        const area = (pi * major * minor).toFixed(2);
+
+        getOutputValue('ellipse-sum', area);
+    }
+
+
+    function getInputValue (inputId){
+        const inputField1 = document.getElementById(inputId);
+        const fieldValueString = inputField1.value;
+        const value = parseFloat(fieldValueString)
+
+        return value;
+    }
+
+    function getOutputValue (outputId, area){
+        const outputValue = document.getElementById(outputId)
+        outputValue.innerText = area;
+    } 
