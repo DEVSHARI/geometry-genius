@@ -12,7 +12,6 @@
         
         triangleHeight.value = '';
 
-
         const total = 0.5 * triangleBaseInputValue * triangleHeightInputValue;
 
         const triangleSum = document.getElementById('triangle-sum');
@@ -56,6 +55,8 @@
         getOutputValue('parallelogram-sum', area)
     }
 
+    // rhombus area calculation
+
     function clickHandler4(){
         const diagonal1 = getInputValue('rhombus-diagonal1')
         const diagonal2 = getInputValue('rhombus-diagonal2')
@@ -64,6 +65,8 @@
         
         getOutputValue('rhombus-sum', area)
     }
+
+    // pentagon area calculation
 
     function clickHandler5(){
         const perimeter = getInputValue('pentagon-perimeter')
@@ -74,6 +77,8 @@
         getOutputValue('pentagon-sum', area)
     }
 
+    // ellipse area calculation
+    
     function clickHandler6(){
         const major = getInputValue('ellipse-major');
         const minor = getInputValue('ellipse-minor');
